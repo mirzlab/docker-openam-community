@@ -8,7 +8,7 @@ Docker image for OpenAM (community version 11.0.3). Designed for quickly build a
 
 ```sh
 $ docker build . -t openam
-$ docker run -it --rm --add-host "openam.example.com:127.0.0.1" -p 443:443 openam
+$ docker run -it --rm --add-host "openam.example.com:127.0.0.1" -p 8443:8443 openam
 ```
 
 **Warning:** Do not forget to add a host mapping inside your hosts file:
@@ -26,8 +26,8 @@ Add this line inside *C:\Windows\System32\drivers\etc\hosts* file:
 ## Default build parameters
 
 * OPENAM_HTTPS: **true**
-* TOMCAT_HTTPS_PORT: **443**
-* TOMCAT_HTTP_PORT: **80**
+* TOMCAT_HTTPS_PORT: **8443**
+* TOMCAT_HTTP_PORT: **8080**
 * OPENAM_HOST: **openam.example.com**
 * OPENAM_DEPLOYMENT_URI: **openam** (Specifies OpenAM war file name that will be deployed inside tomcat)
 * OPENAM_ADMIN_PASSWORD: **Admin001**
