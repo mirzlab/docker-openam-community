@@ -1,4 +1,4 @@
-# docker-openam
+# docker-openam-community
 
 Docker image for OpenAM (community version 11.0.3). Designed for quickly build a simple OpenAM environment.
 
