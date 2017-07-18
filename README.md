@@ -12,6 +12,7 @@ $ docker run -it --rm --add-host "openam.example.com:127.0.0.1" -p 8443:8443 ope
 ```
 
 **Warning:** Do not forget to add a host mapping inside your hosts file:
+
 **Linux:**
 ```sh
 $ echo "127.0.0.1 openam.example.com" >> /etc/hosts
