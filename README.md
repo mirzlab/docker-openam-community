@@ -11,18 +11,7 @@ $ docker build . -t openam
 $ docker run -it --rm --add-host "openam.example.com:127.0.0.1" -p 8443:8443 openam
 ```
 
-**Warning:** Do not forget to add a host mapping inside your hosts file:
-
-**Linux:**
-```sh
-$ echo "127.0.0.1 openam.example.com" >> /etc/hosts
-```
-
-**Windows:**
-Add this line inside *C:\Windows\System32\drivers\etc\hosts* file:
-```sh
-127.0.0.1 openam.example.com
-```
+Update your /etc/hosts file on your host machine if necessary.
 
 ## Default build parameters
 
