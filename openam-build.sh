@@ -13,12 +13,12 @@ checkOpenAMParameters() {
 
   if [ -z "$OPENAM_ADMIN_PASSWORD" ]; then
     export OPENAM_ADMIN_PASSWORD="Admin001"
-    echo "OPENAM_ADMIN_PASSWORD not set: using default \"Admin001\""
+    echo "OPENAM_ADMIN_PASSWORD not set: using default ${OPENAM_ADMIN_PASSWORD}"
   fi
 
   if [ -z "$OPENAM_VERSION" ]; then
-    export OPENAM_VERSION="13.0.0"
-    echo "OPENAM_VERSION not set: using default \"13.0.0\""
+    export OPENAM_VERSION="11.0.3"
+    echo "OPENAM_VERSION not set: using default ${OPENAM_VERSION}"
   fi
 
   if [ $OPENAM_HTTPS = true ]; then
