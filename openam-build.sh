@@ -32,7 +32,7 @@ waitForOpenAM() {
   OPENAM_TEST_URL_PRE_CONFIGURE=${SERVER_URL}/${OPENAM_DEPLOYMENT_URI}/config/options.htm
   until [ "`curl -k -s ${OPENAM_TEST_URL_PRE_CONFIGURE} | grep 'Configuration'`" != "" ];
   do
-    echo "INFO: Deploying OpenAM war ...\n"
+    echo "INFO: Deploying OpenAM war ..."
     sleep 5
   done
   printf "INFO: OpenAM deployed.\n"
@@ -75,7 +75,7 @@ waitForOpenAM
 generateOpenAMConfigurationFile
 java -Djavax.net.ssl.trustStore=/tmp/cacerts.jks -Djavax.net.ssl.trustStorePassword=password -jar /tmp/openam-configurator-tool-${OPENAM_VERSION}.jar -f /tmp/openam-configuration.txt
 
-catalina.sh stop
+tail -f ${CATALINA_HOME}/logs/catalina.out
 
 # Restore hosts file
 cp /tmp/hosts /etc/hosts && rm /tmp/hosts
