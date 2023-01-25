@@ -1,4 +1,4 @@
-FROM tomcat:7.0.79-jre7
+FROM tomcat:7.0.94-jre7
 
 MAINTAINER MIRZAIAN Vincent
 
